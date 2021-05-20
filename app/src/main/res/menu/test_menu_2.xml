@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/notShuffle"
+        android:title="@string/not_shuffle" />
+
+    <item
+        android:id="@+id/doShuffle"
+        android:title="@string/do_shuffle" />
+</menu>

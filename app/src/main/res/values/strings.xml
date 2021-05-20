@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">EnglishVocabulary</string>
+
+    <!--    about MainActivity's bottom navigation bar menu-->
+    <string name="menu_favorites">Favorites</string>
+    <string name="menu_words">Words</string>
+    <string name="menu_test">Test</string>
+    <string name="menu_result">Result</string>
+    <string name="menu_translate">Translate</string>
+
+    <!--    trash string-->
+    <string name="favorite_string">This is Fravorites Layout</string>
+    <string name="words_string">This is words Layout</string>
+    <string name="test_string">This is test Layout</string>
+    <string name="result_string">This is result Layout</string>
+
+    <!--    about fragment_words-->
+    <string name="word_title">핵심 콕!콕! 단어장</string>
+    <string name="show_kor">단어 뜻 보기</string>
+    <string name="hide_kor">단어 뜻 가리기</string>
+    <string name="sort">정렬 기준: </string>
+    <string name="sort_greater">사전순(내림차순)</string>
+    <string name="sort_less">사전순(오름차순)</string>
+
+    <!--    about recycler_word-->
+    <string name="hide_kor_string">----</string>
+
+    <!--    about fragment_favorites-->
+    <string name="favorite_title">콕!콕! 즐겨찾기</string>
+
+    <!--    about word_menu-->
+    <string name="favorite_delete">즐겨챶기 삭제</string>
+    <string name="favorite_add">즐겨찾기 추가</string>
+
+    <!--    about fragment_test-->
+    <string name="test_title">핵심 콕!콕! 테스트</string>
+    <string name="selecting_word_title">단어 선택</string>
+    <string name="selecting_word_info">모든 단어</string>
+    <string name="test_method_title">출제 방식</string>
+    <string name="test_method_info">순서대로 출제</string>
+    <string name="test_meaning_title">단어 뜻 맞추기</string>
+    <string name="test_meaning_info">주어진 영어 단어의 뜻 맞추기! 5개의 선택지 중에 옳바른 답을 찾아보세요!</string>
+    <string name="test_word_title1">스펠링 맞추기(객관식)</string>
+    <string name="test_word_title2">스펠링 맞추기(주관식)</string>
+    <string name="test_word_info">단어를 제대로 외웠다면 이것도 맞출 수 있겠죠? 주어진 영어 단어의 뜻을 보고 영어 단어를 맞춰보세요!</string>
+    <string name="test_listening_title">리스닝 테스트</string>
+    <string name="test_listening_info">단어를 외우려면 발음까지 알아야죠! 글자만 안다고 단어를 아는게 아니랍니다! 들려주는 단어를 잘 듣고 옳바른 답을 맞춰보세요!</string>
+    <string name="all_word">모든 단어</string>
+    <string name="favorite_word">즐겨찾기 단어</string>
+    <string name="not_shuffle">순서대로 출제</string>
+    <string name="do_shuffle">랜덤하게 출제</string>
+
+    <!--    about test activity-->
+    <string name="test_meaning_problem">주어진 단어에 알맞는 뜻을 선택하세요.</string>
+    <string name="test_word_problem">주어진 뜻에 알맞는 단어를 선택하세요.</string>
+    <string name="test_listening_problem">들려주는 단어와 뜻을 선택하세요.</string>
+    <string name="answer_loading">Loading…</string>
+
+    <!--    about fragment_result-->
+    <string name="result_title">핵심 콕!콕! 테스트 결과</string>
+    <string name="result_click">클릭해서 자세한 결과를 확인하세요!</string>
+    <string name="result_text1">응시 일자 : </string>
+    <string name="result_text2">시험 종류 : </string>
+    <string name="result_text3">문제 수 : </string>
+    <string name="result_text4">정답 : </string>
+    <string name="result_text5">오답 : </string>
+
+    <!--    about fragment_translate-->
+    <string name="translate_title">콕!콕! 번역기</string>
+    <string name="translate_kor_to_eng">한국어  -->  영어</string>
+    <string name="translate_eng_to_kor">영어  -->  한국어</string>
+    <string name="translate_result">번역 결과</string>
+    <string name="translate_emtpy">번역 한 번에 500원!</string>
+
+</resources>

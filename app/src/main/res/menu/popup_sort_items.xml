@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/sort_greater"
+        android:title="@string/sort_greater" />
+
+    <item
+        android:id="@+id/sort_less"
+        android:title="@string/sort_less" />
+
+</menu>
