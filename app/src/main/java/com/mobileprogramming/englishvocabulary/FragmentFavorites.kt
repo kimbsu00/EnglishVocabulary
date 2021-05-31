@@ -95,6 +95,7 @@ class FragmentFavorites : Fragment() {
                                             Toast.LENGTH_SHORT
                                         ).show()
                                     }
+                                    words.remove(word)
                                     adapter.notifyDataSetChanged()
                                 }
                             }
