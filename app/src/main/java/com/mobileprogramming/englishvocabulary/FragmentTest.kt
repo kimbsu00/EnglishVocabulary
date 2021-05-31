@@ -77,7 +77,7 @@ class FragmentTest : Fragment() {
                                 }
                                 R.id.favoriteWord -> {
                                     if (myViewModel.bookmark.value!!.isNotEmpty()) {
-                                        if (myViewModel.bookmark.value!!.size > 4) {
+                                        if (myViewModel.bookmark.value!!.size > 9) {
                                             selectWordFlag = SELECT_WORD_FAVORITE_WORD
                                             binding.selectWordInfo.text =
                                                 getString(R.string.favorite_word)
@@ -87,7 +87,7 @@ class FragmentTest : Fragment() {
                                                 getString(R.string.all_word)
                                             Toast.makeText(
                                                 context,
-                                                "즐겨찾기 단어가 5개 이상이어야 가능합니다!",
+                                                "즐겨찾기 단어가 10개 이상이어야 가능합니다!",
                                                 Toast.LENGTH_SHORT
                                             ).show()
                                         }

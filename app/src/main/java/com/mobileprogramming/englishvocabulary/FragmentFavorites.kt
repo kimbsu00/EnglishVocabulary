@@ -2,6 +2,7 @@ package com.mobileprogramming.englishvocabulary
 
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
@@ -32,7 +33,7 @@ class FragmentFavorites : Fragment() {
     // UI 변수 끝
 
     val words: ArrayList<Word> = ArrayList()
-    var tts: TextToSpeech? = null
+    lateinit var tts: TextToSpeech
 
     val myViewModel: MyViewModel by activityViewModels()
 
@@ -44,8 +45,16 @@ class FragmentFavorites : Fragment() {
         rootView = inflater.inflate(R.layout.fragment_favorites, container, false)
 
         init()
+        initTTS()
 
         return rootView
+    }
+
+    fun initTTS() {
+        tts = TextToSpeech(context, TextToSpeech.OnInitListener {
+            tts.language = Locale.US
+            Log.i("tts is ready", "tts is ready")
+        })
     }
 
     private fun init() {
@@ -62,6 +71,8 @@ class FragmentFavorites : Fragment() {
         adapter = FragmentFavoritesAdapter(words, words)
         adapter.setOnItemClickListener(object : FragmentFavoritesAdapter.OnItemClickListener {
             override fun onEngTextViewClick(v: View, eng: String) {
+                Log.i("onEngTextViewClick", "in FragmentFavorites")
+                Log.i("tts", (tts == null).toString())
                 tts?.speak(eng, TextToSpeech.QUEUE_ADD, null, null)
             }
 

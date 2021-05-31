@@ -2,6 +2,7 @@ package com.mobileprogramming.englishvocabulary
 
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
+import android.util.Log
 import android.widget.FrameLayout
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -146,7 +147,7 @@ class MainActivity : AppCompatActivity() {
             isTtsReady = true
             tts.language = Locale.US
             (fragmentWords as FragmentWords).tts = tts
-            (fragmentFavorites as FragmentFavorites).tts = tts
+            Log.i("tts is ready", "tts is ready")
         })
     }
 

@@ -87,6 +87,7 @@ class TestWordActivity2 : AppCompatActivity() {
                     }
 
                     if (problemIndex < test.size) {
+                        answerEdit.text.clear()
                         setProblem(problemIndex++)
                     } else {
                         finishTest()
@@ -99,6 +100,7 @@ class TestWordActivity2 : AppCompatActivity() {
                 test.problems[pIndex].wrongAnswer = Word("", "", false, false)
 
                 if (problemIndex < test.size) {
+                    answerEdit.text.clear()
                     setProblem(problemIndex++)
                 } else {
                     finishTest()

@@ -34,7 +34,7 @@ class Test : Serializable {
         val answers: ArrayList<Word> = ArrayList<Word>()
         val random = Random()
         val max: Int = if (words.size - size == 0) size else words.size - size
-        val start = random.nextInt(max)
+        val start = if (words.size - size == 0) 0 else random.nextInt(max)
         for (i in 1..size) {
             answers.add(words[start + i - 1])
         }
