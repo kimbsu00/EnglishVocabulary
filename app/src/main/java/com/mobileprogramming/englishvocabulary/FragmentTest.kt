@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.PopupMenu
 import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -23,18 +24,7 @@ class FragmentTest : Fragment() {
     val TEST_METHOD_NOT_SHUFFLE: Int = 3
     val TEST_METHOD_DO_SHUFFLE: Int = 4
 
-    val getContent = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-        if (it.data != null) {
-            val test: Test = it.data!!.getSerializableExtra("test") as Test
-            myViewModel.addTestRecord(test)
-            myViewModel.myDBHelper!!.insertTest(test)
-
-            val intent: Intent = Intent(context, PopupTestResultActivity::class.java)
-            intent.putExtra("ansNum", test.ansNum)
-            intent.putExtra("size", test.size)
-            startActivity(intent)
-        }
-    }
+    lateinit var getContent: ActivityResultLauncher<Intent>
 
     // UI 변수 시작
     lateinit var binding: FragmentTestBinding
@@ -49,6 +39,19 @@ class FragmentTest : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentTestBinding.inflate(layoutInflater)
+
+        getContent = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            if (it.data != null) {
+                val test: Test = it.data!!.getSerializableExtra("test") as Test
+                myViewModel.addTestRecord(test)
+                myViewModel.myDBHelper!!.insertTest(test)
+
+                val intent: Intent = Intent(context, PopupTestResultActivity::class.java)
+                intent.putExtra("ansNum", test.ansNum)
+                intent.putExtra("size", test.size)
+                startActivity(intent)
+            }
+        }
 
         init()
 
