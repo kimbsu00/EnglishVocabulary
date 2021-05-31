@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EnglishVocabulary</string>
+    <string name="app_name">콕!콕!단어장</string>
 
     <!--    about MainActivity's bottom navigation bar menu-->
     <string name="menu_favorites">Favorites</string>
