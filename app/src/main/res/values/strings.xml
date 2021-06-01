@@ -29,7 +29,7 @@
     <string name="favorite_title">콕!콕! 즐겨찾기</string>
 
     <!--    about word_menu-->
-    <string name="favorite_delete">즐겨챶기 삭제</string>
+    <string name="favorite_delete">즐겨찾기 삭제</string>
     <string name="favorite_add">즐겨찾기 추가</string>
 
     <!--    about fragment_test-->
