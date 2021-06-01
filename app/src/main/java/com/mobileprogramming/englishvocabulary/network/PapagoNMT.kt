@@ -17,8 +17,8 @@ class PapagoNMT {
     }
 
     val apiURL: String = "https://naveropenapi.apigw.ntruss.com/nmt/v1/translation"
-    val CLIENT_ID: String = "xbxg7px4nh"
-    val CLIENT_SECRET: String = "9szSb7p27pf82NcsDL5O3OxOn6uVYrG45svYSTSe"
+    val CLIENT_ID: String = "YOUR_CLIENT_ID"
+    val CLIENT_SECRET: String = "YOUR_CLIENT_SECRET"
 
     var translateResult: String = ""
 
